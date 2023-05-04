@@ -45,13 +45,7 @@ int main() {
     vector<double> x = {0.847, 1.546, 1.834, 2.647, 2.910};
     vector<double> y = {1.104, 1.042, 0.029, -0.344, -0.449};
 
-    while (input_file.good()) {
-        double xi, yi;
-        input_file >> xi >> yi;
-        x.push_back(xi);
-        y.push_back(yi);
-    }
-    input_file.close();
+    //!!!!!!!!!!!!!!!!!!Добавить заполнение векторов выше из файла
 
     // Значение x, для которого нужно найти значение полинома
     double x_interp = 1.0;
