@@ -101,6 +101,7 @@ int calculating() {
         }
         else inf_sum = 0;
     }
+    
     std::cout << "Приближения: " << std::endl;
     for (int i = 0; i < iteratio; i++) {
         for (int j = 0; j < raw; j++) {

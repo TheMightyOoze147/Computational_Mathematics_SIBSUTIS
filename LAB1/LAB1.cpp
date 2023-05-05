@@ -24,7 +24,7 @@ int main() {
             }
         }
     }
-
+    
     // Вычисляем значения неизвестных методом обратного хода
     double results[m_size];
     results[m_size - 1] = matrix[m_size - 1][m_size] / matrix[m_size - 1][m_size - 1];

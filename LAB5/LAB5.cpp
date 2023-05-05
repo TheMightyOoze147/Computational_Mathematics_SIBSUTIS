@@ -2,6 +2,7 @@
 #include <math.h> // добавляем математические функции
 
 using namespace std;
+
 // функция, интеграл
 double f(double x) {
     //return exp(-x*x);

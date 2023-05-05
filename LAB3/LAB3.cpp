@@ -27,6 +27,7 @@ int main() {
     cin >> a >> b;
     cout << "\nВведите точность: " << endl;
     cin >> epsilon;
+    
     //Локализация корня
     while (f(a) * f(b) > 0) {
         if (f(a) > f(b)) {
