@@ -21,7 +21,12 @@ double secant_method(double a, double b, double epsilon) {
 }
 
 int main() {
-    double a = 0.1, b = 2.0, epsilon = 1e-6;
+    double a, b, epsilon;
+    //Проверялось при a = 0.1, b = 5.0, epsilon = 1e-6
+    cout << "\nВведите а и b (через пробел): " << endl;
+    cin >> a >> b;
+    cout << "\nВведите точность: " << endl;
+    cin >> epsilon;
     //Локализация корня
     while (f(a) * f(b) > 0) {
         if (f(a) > f(b)) {
@@ -31,6 +36,6 @@ int main() {
         }
     }
     double x = secant_method(a, b, epsilon);
-    cout << "Корень: " << x << endl;
+    cout << "Корень для уравнения 3 - pow(x, 1.5) + 0.5 * log(x): \n" << x << endl;
     return 0;
 }

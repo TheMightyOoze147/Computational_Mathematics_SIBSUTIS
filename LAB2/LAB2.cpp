@@ -3,13 +3,13 @@
 #include <locale>
 #include <vector>
 
-// #define raw 3 //строки
-// #define col raw+1 //столбцы
-// int matrix[raw][col] = {
-//         {5, -1, 3, 5},
-//         {1, -4, 2, 20},
-//         {2, -1, 5, 10},
-// };
+#define raw 3 //строки
+#define col raw+1 //столбцы
+int matrix[raw][col] = {
+        {5, -1, 3, 5},
+        {1, -4, 2, 20},
+        {2, -1, 5, 10},
+};
 
 
 // #define raw 3 //строки

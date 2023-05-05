@@ -1,7 +1,8 @@
 #include <iostream>
 #include <vector>
 #include <fstream>
-
+#include <string>
+#include <sstream>
 using namespace std;
 
 // Функция для вычисления факториала
@@ -36,25 +37,36 @@ double newton_interpolation(vector<double> x, vector<double> y, double x_interp)
 
 int main() {   
     ifstream input_file("in.txt");
+    vector <double> x, y;
+    double value;
     if (!input_file) {
         cout << "Error: File not found." << endl;
         return 1;
     }
-    // Известные точки
-    
-    vector<double> x = {0.847, 1.546, 1.834, 2.647, 2.910};
-    vector<double> y = {1.104, 1.042, 0.029, -0.344, -0.449};
 
-    //!!!!!!!!!!!!!!!!!!Добавить заполнение векторов выше из файла
+    string line;
+    getline(input_file, line);
+    istringstream iss(line);
+    while (iss >> value) {
+        x.push_back(value);
+    }
 
-    // Значение x, для которого нужно найти значение полинома
-    double x_interp = 1.0;
+    getline(input_file, line);
+    istringstream iss2(line);
+    while (iss2 >> value) {
+        y.push_back(value);
+    }
+
+    // Значение x, для которого нужно найти значение полином
+    double x_interp;
+    cout << "Введите значение x, для якоторого нужно найти значение полинома: " << endl;
+    cin >> x_interp;
 
     // Вычисление значения полинома Ньютона
     double result = newton_interpolation(x, y, x_interp);
 
     // Вывод результата
     cout << "Значение полинома Ньютона в точке " << x_interp << " равно " << result << endl;
-
+    input_file.close();
     return 0;
 }
